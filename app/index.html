@@ -1,0 +1,54 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js app"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <title>ENOA Stack</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- bower:css -->
+    <!-- endinject -->
+    <!-- injectCss:css -->
+    <link rel="stylesheet" href="/tmp/styles/app.css">
+    <!-- endinject -->
+</head>
+<body ng-app="app">
+<section
+        ng-controller="MainController as main"
+        ng-include="'/common/layouts/default.html'"></section>
+
+<script src="https://cdn.socket.io/socket.io-1.3.5.js"></script>
+<!-- bower:js -->
+<script src="/app/bower_components/angular/angular.js"></script>
+<script src="/app/bower_components/lodash/lodash.js"></script>
+<script src="/app/bower_components/uri-templates/uri-templates.js"></script>
+<script src="/app/bower_components/deep-diff/index.js"></script>
+<script src="/app/bower_components/angular-socket-io/socket.js"></script>
+<script src="/app/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="/app/bower_components/angular-model-factory/dist/angular-model-factory.js"></script>
+<!-- endinject -->
+<!-- config:js -->
+<script src="/app/config/routes/home/home.route.js"></script>
+<script src="/app/config/routes/routes.module.js"></script>
+<script src="/app/config/modules.config.js"></script>
+<script src="/app/config/main.config.js"></script>
+<script src="/app/config/bootstrap.config.js"></script>
+<!-- endinject -->
+<!-- models:js -->
+<script src="/app/models/message.js"></script>
+<!-- endinject -->
+<!-- modules:js -->
+<script src="/app/modules/home/controllers/home.controller.js"></script>
+<!-- endinject -->
+<!-- common:js -->
+<script src="/app/common/services/socket/socket.js"></script>
+<script src="/app/common/controllers/main.controller.js"></script>
+<!-- endinject -->
+<!-- app:js -->
+<script src="/app/socket.js"></script>
+<script src="/app/root.js"></script>
+<!-- endinject -->
+</body>
+</html>

@@ -1,0 +1,20 @@
+<ul class="pages">
+    <form ng-submit="home.addMessage()" class="chat page" ng-if="home.isAuthenticated()">
+        <div class="chatArea">
+            <ul class="messages">
+                <li ng-repeat="msg in home.messages">
+                    <span class="username">{{msg.username}}</span>
+                    <span class="messageBody">{{msg.content}}</span>
+                    <input type="button" class="removeBtn" value="X" ng-click="home.deleteMessage(msg['@rid'])"/>
+                </li>
+            </ul>
+        </div>
+        <input class="inputMessage" ng-model="home.newMsg" placeholder="Type here..." autofocus/>
+    </form>
+    <form ng-submit="home.authenticate()" class="login page" ng-if="!home.isAuthenticated()">
+        <div class="form">
+            <h3 class="title">What's your nickname?</h3>
+            <input class="usernameInput" ng-model="home.username" type="text" maxlength="14" />
+        </div>
+    </form>
+</ul>

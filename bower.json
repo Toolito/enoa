@@ -1,0 +1,22 @@
+{
+  "name": "ENOA-stack",
+  "version": "0.0.0",
+  "authors": [
+    "Toolito <pietro57360@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-ui-router": "~0.2.15",
+    "lodash": "~3.9.0",
+    "angular-model-factory": "~0.3.1",
+    "angular-socket-io": "~0.7.0"
+  }
+}
