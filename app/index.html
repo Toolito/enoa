@@ -9,6 +9,9 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <!-- bower:css -->
+    <link rel="stylesheet" href="/app/bower_components/mdi/css/materialdesignicons.css">
+    <link rel="stylesheet" href="/app/bower_components/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="/app/bower_components/lumx/dist/lumx.css">
     <!-- endinject -->
     <!-- injectCss:css -->
     <link rel="stylesheet" href="/tmp/styles/app.css">
@@ -26,8 +29,14 @@
 <script src="/app/bower_components/uri-templates/uri-templates.js"></script>
 <script src="/app/bower_components/deep-diff/index.js"></script>
 <script src="/app/bower_components/angular-socket-io/socket.js"></script>
+<script src="/app/bower_components/jquery/dist/jquery.js"></script>
+<script src="/app/bower_components/velocity/velocity.js"></script>
+<script src="/app/bower_components/velocity/velocity.ui.js"></script>
+<script src="/app/bower_components/moment/moment.js"></script>
+<script src="/app/bower_components/angular-ui-utils/keypress.js"></script>
 <script src="/app/bower_components/angular-ui-router/release/angular-ui-router.js"></script>
 <script src="/app/bower_components/angular-model-factory/dist/angular-model-factory.js"></script>
+<script src="/app/bower_components/lumx/dist/lumx.js"></script>
 <!-- endinject -->
 <!-- config:js -->
 <script src="/app/config/routes/home/home.route.js"></script>
@@ -44,10 +53,10 @@
 <!-- endinject -->
 <!-- common:js -->
 <script src="/app/common/services/socket/socket.js"></script>
+<script src="/app/common/services/sidebar/sidebar.js"></script>
 <script src="/app/common/controllers/main.controller.js"></script>
 <!-- endinject -->
 <!-- app:js -->
-<script src="/app/socket.js"></script>
 <script src="/app/root.js"></script>
 <!-- endinject -->
 </body>

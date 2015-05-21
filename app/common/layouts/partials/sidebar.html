@@ -1,0 +1,29 @@
+<div class="sidebar-filter"
+     ng-class="{ 'sidebar-filter--is-shown': main.sidebar.isShown() }"
+     ng-click="main.sidebar.toggle()">
+</div>
+
+<div class="sidebar" ng-class="{'sidebar--is-shown' : main.sidebar.isShown()}">
+    <!--<div class="sidebar-user">
+        <div class="user-avatar">
+            <img src="https://s3.amazonaws.com/uifaces/faces/twitter/dannpetty/48.jpg" alt=""/>
+        </div>
+        <div class="user-account">
+            <span class="user-email">john.doe@test.fr</span>
+        </div>
+    </div>-->
+    <div class="sidebar-menu">
+        <div class="sidebar-label">Navigation</div>
+        <ul>
+            <li ng-class="{active: $state.includes('rooms') }">
+                <i class="mdi mdi-filmstrip"></i><a ui-sref="rooms">Public rooms</a>
+            </li>
+            <li ng-class="{active: $state.includes('friends') }">
+                <i class="mdi mdi-account"></i><a ui-sref="friends">Friends</a>
+            </li>
+        </ul>
+    </div>
+
+
+</div>
+

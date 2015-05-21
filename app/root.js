@@ -14,6 +14,8 @@
             'ui.router',
             'modelFactory',
             'btford.socket-io',
+            'lumx',
+            'ui.keypress',
 
             // Core area
             'app.config',

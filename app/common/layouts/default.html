@@ -1,13 +1,24 @@
 <!-- begin: HEADER -->
+<header ng-include="'/app/common/layouts/partials/header.html'">
+</header>
 <!-- end: HEADER -->
 
 <!-- begin: MAIN CONTAINER -->
-<div class="main-container">
+<div class="main" flex-container="row">
+
+    <!-- begin: SIDEBAR -->
+    <aside ng-include="'/app/common/layouts/partials/sidebar.html'"></aside>
+    <!-- end: SIDEBAR -->
 
     <!-- begin: MAIN -->
-    <main class="main" ui-view="main"></main>
+    <main id="content" class="main-container" ui-view="main"></main>
     <!-- end: MAIN -->
+
+    <!-- begin: LOADING SPINNER -->
+    <div class="loading-filter loading-filter--is-shown" ng-if="$root.loading">
+        <lx-progress type="circular" color="#7986CB" ></lx-progress>
+    </div>
+    <!-- end: LOADING SPINNER -->
 
 </div>
 <!-- end: MAIN CONTAINER -->
-

@@ -1,20 +1,44 @@
-<ul class="pages">
-    <form ng-submit="home.addMessage()" class="chat page" ng-if="home.isAuthenticated()">
-        <div class="chatArea">
-            <ul class="messages">
-                <li ng-repeat="msg in home.messages">
-                    <span class="username">{{msg.username}}</span>
-                    <span class="messageBody">{{msg.content}}</span>
-                    <input type="button" class="removeBtn" value="X" ng-click="home.deleteMessage(msg['@rid'])"/>
-                </li>
-            </ul>
-        </div>
-        <input class="inputMessage" ng-model="home.newMsg" placeholder="Type here..." autofocus/>
-    </form>
-    <form ng-submit="home.authenticate()" class="login page" ng-if="!home.isAuthenticated()">
-        <div class="form">
-            <h3 class="title">What's your nickname?</h3>
-            <input class="usernameInput" ng-model="home.username" type="text" maxlength="14" />
-        </div>
-    </form>
-</ul>
+<div class="section">
+    <div class="section__title">
+        Accueil
+    </div>
+    <div class="section__content">
+        <ul class="pages">
+            <form class="chat page" ng-if="home.isAuthenticated()">
+
+                <div class="mt++">
+                    <ul class="list mt++">
+                        <li class="list-row list-row--has-separator" flex-container="row" ng-repeat="msg in home.messages">
+                            <div class="list-row__primary tc-primary-dark" flex-item="1">
+                                {{::msg.username}}
+                            </div>
+
+                            <div class="list-row__content" flex-item="10">
+                                <span>{{::msg.content}}</span>
+                            </div>
+                            <div class="list-row__secondary" flex-item="1">
+                                <i class="icon icon--m icon--grey icon--flat mdi mdi-close" ng-click="home.deleteMessage(msg['@rid'])"></i>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div flex-container="row">
+                    <div flex-item="1"></div>
+                    <div flex-item="10">
+                        <lx-text-field label="Message">
+                            <textarea ng-model="home.newMsg" ui-keypress="{13:'home.addMessage()'}" autofocus></textarea>
+                        </lx-text-field>
+                    </div>
+                    <div flex-item="1">
+                        <button class="btn btn--xl btn--blue btn--icon" ng-click="home.addMessage()" lx-ripple><i class="mdi mdi-send"></i></button>
+                    </div>
+                </div>
+            </form>
+            <form ng-submit="home.authenticate()" class="login page" ng-if="!home.isAuthenticated()">
+                <h3 class="title">What's your nickname?</h3>
+                <input class="usernameInput" ng-model="home.username" type="text" maxlength="14" />
+            </form>
+        </ul>
+    </div>
+</div>
+
